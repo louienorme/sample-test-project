@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { app } from '../src/server';
+import app from '../src/server';
 import request from 'supertest';
 import { TaskModel } from '../src/tasks/model';
 import dbConnect from '../src/_config/dbConnect';

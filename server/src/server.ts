@@ -38,4 +38,4 @@ const runServer = async () => {
 
 runServer();
 
-module.exports = app;
+export default app;
