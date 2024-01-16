@@ -5,7 +5,7 @@ export const getTasksController: RequestHandler = async (req, res, next) => {
   try {
     const tasks = await getTasks();
 
-    res.json(tasks);
+    res.status(200).json({ success: true, data: tasks });
   } catch (err) {
     next(err);
   }
@@ -15,7 +15,7 @@ export const postTaskController: RequestHandler = async (req, res, next) => {
   try {
     const task = await postTask(req.body);
 
-    res.json(task);
+    res.status(201).json({ success: true, data: task });
   } catch (err) {
     next(err);
   }

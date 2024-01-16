@@ -37,3 +37,5 @@ const runServer = async () => {
 };
 
 runServer();
+
+module.exports = app;
