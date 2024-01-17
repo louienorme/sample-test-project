@@ -1,4 +1,4 @@
-import { TaskModel } from './model';
+import { Task, TaskModel } from './model';
 
 export const getTasks = async () => {
   try {
@@ -10,7 +10,7 @@ export const getTasks = async () => {
   }
 };
 
-export const postTask = async (data: any) => {
+export const postTask = async (data: Task) => {
   try {
     const task = new TaskModel(data);
 
