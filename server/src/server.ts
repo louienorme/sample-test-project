@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 
 import dbConnect from './_config/dbConnect';
+import { mainRouter } from './tasks/route';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 app.use(morgan('tiny'));
+app.use('/api', mainRouter);
 
 const port = process.env.PORT || 5000;
 
@@ -35,3 +37,5 @@ const runServer = async () => {
 };
 
 runServer();
+
+export default app;
